@@ -2,8 +2,14 @@
 <html lang="de">
 <head>
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <title>Schreinerei Meier, Kontakt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    img-src 'self' assets/img;
+    font-src 'self' assets/fonts https://fonts.googleapis.com https://fonts.gstatic.com;
+    style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com;
+    script-src 'self';">
+	<title>Schreinerei Meier, Kontakt</title>
     <link rel="stylesheet" href="css/formate.css">
   </head>
   <body>
@@ -17,7 +23,7 @@
         <li><a href="index.html">Startseite</a></li>
         <li><a href="preise.html">Unsere Preise</a></li>
         <li><a href="inhalt.html">Bilder von unseren Produkten</a></li>
-        <li><a tabindex="0" aria-current="page">Kontakt und Impressum</a></li>
+        <li><a tabindex="0" aria-current="page"><b>Kontakt und Impressum</b></a></li>
       </ul>
     </nav>
 	

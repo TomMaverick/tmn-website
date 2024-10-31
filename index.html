@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    img-src 'self' assets/img;
+    font-src 'self' assets/fonts https://fonts.googleapis.com https://fonts.gstatic.com;
+    style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com;
+    script-src 'self';">
+
     <title>tmnhost.de</title>
     <link rel="icon" href="assets/img/favicon.png" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
@@ -30,7 +37,6 @@
         <li><a href="https://wiki.selfhtml.org/wiki/HTML/Tutorials/Einstieg">SelfHTML Tutorial</a></li>
         <li><a href="selfhtml/schreinerei/index.html">Tutorial - Schreinerei Meier</a></li>
     </ul>
-</p>
 <footer>
     <p>© 2024 by Tom N.</p>
 </footer>
