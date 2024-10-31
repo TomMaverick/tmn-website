@@ -3,6 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    img-src 'self' assets/img;
+    font-src 'self' assets/fonts https://fonts.googleapis.com https://fonts.gstatic.com;
+    style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com;
+    script-src 'self';">
     <title>Schreinerei Meier, Dingenskirchen</title>
     <link rel="stylesheet" href="css/formate.css">
   </head>
@@ -41,7 +47,7 @@
     </ul>
     <aside id="angebot">
       <h3>Angebot</h3>
-      <p>Nächste Woche 10% auf alles!</p>
+      <p>Nächste Woche 10 % auf alles!</p>
     </aside>
    </section>
    <section>
@@ -55,7 +61,6 @@
     </section>
     <footer>
       <a href="kontakt.html">Kontakt</a>
-      <a href="kontakt.html#impressum">Impressum</a>
       <p>© 2021 by selfHTML</p>
     </footer>
   </body>
