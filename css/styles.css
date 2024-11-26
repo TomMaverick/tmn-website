@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: 'JetBrains Mono', monospace; /* Set JetBrains Mono as the font */
+    font-family: 'JetBrains Mono', monospace;
     background-color: var(--background-dark);
     color: var(--text-dark);
     margin: 0;
@@ -21,19 +21,19 @@ header {
     text-align: center;
     background-color: var(--header-dark);
     color: white;
-    position: relative; /* Added to allow absolute positioning of the button */
+    position: relative;
 }
 
 .toggle-button {
-    position: absolute; /* Position the button absolutely */
-    top: 1rem; /* Aligns with the header */
-    right: 1rem; /* Aligns with the right edge of the header */
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
     padding: 0.5rem;
     cursor: pointer;
-    background: none; /* Remove background */
-    border: none; /* Remove border */
-    color: white; /* Icon color */
-    font-size: 1.5rem; /* Icon size */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
 }
 
 main {
