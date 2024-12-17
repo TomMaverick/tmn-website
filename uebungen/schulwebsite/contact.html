@@ -4,51 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Theodor-Litt-Schule, Gießen - Programmierübung</title>
 </head>
 <body>
-<header>
-    <div class ="header-img">
-        <a href="index.html" aria-label="Zurück zur Startseite">
-            <img src="assets/img/logo_tls.png" alt="Logo der Theodor-Litt-Schule, Gießen">
-        </a>
-    </div>
-    <div>
-        <p class="header-title">Theodor-Litt-Schule Gießen</p>
-        <p class="header-subtitle">Gewerbliche Berufsschule der Stadt Gießen</p>
-    </div>
-
+<div class="grid-container">
+    <header>
+        <div class="header-img">
+            <a href="index.html" aria-label="Zurück zur Startseite">
+                <img src="assets/img/logo_tls.png" alt="Logo der Theodor-Litt-Schule, Gießen">
+            </a>
+        </div>
+        <div>
+            <p class="header-title">Theodor-Litt-Schule Gießen</p>
+            <p class="header-subtitle">Gewerbliche Berufsschule der Stadt Gießen</p>
+        </div>
+    </header>
     <nav class="header-nav">
         <ul>
             <li><a href="index.html">Startseite</a></li>
             <li><a href="index.html#Schulformen">Schulformen</a></li>
             <li><a href="index.html#Sprechzeiten">Sprechzeiten</a></li>
-            <li>Impressum und Kontakt</li>
+            <li><a href="index.html#Impressum">Impressum und Kontakt</a></li>
         </ul>
     </nav>
-</header>
-<main>
-    <h3 class="main-category" id="Impressum">Impressum</h3>
-    <p class="contact-no-indent">INHALTLICH VERANTWORTLICH:</p>
-    <p class="contact-indent">
-        Theodor-Litt-Schule<br>
-        Ringallee 62<br>
-        D-35390<br>
-        Gießen<br>
-        Germany
-    </p>
+    </header>
+    <main>
+        <h3 class="main-category" id="Impressum">Impressum</h3>
+        <p class="contact-no-indent">INHALTLICH VERANTWORTLICH:</p>
+        <p class="contact-indent">
+            Theodor-Litt-Schule<br>
+            Ringallee 62<br>
+            D-35390<br>
+            Gießen<br>
+            Germany
+        </p>
 
-    <h3 class="main-category" id="Kontakt">Kontakt</h3>
-    <p class="contact-no-indent">Tel:</p>
-    <p class="contact-indent">+49 641 306 0</p>
-    <p class="contact-no-indent">Fax:</p>
-    <p class="contact-indent">+49 641 306 0</p>
-    <p class="contact-no-indent">E-Mail-Adresse:</p>
-    <p class="contact-indent"><a href= "mailto: test@example.com">test@example.com</a></p>
+        <h3 class="main-category" id="Kontakt">Kontakt</h3>
+        <p class="contact-no-indent">Tel:</p>
+        <p class="contact-indent">+49 641 306 0</p>
+        <p class="contact-no-indent">Fax:</p>
+        <p class="contact-indent">+49 641 306 0</p>
+        <p class="contact-no-indent">E-Mail-Adresse:</p>
+        <p class="contact-indent"><a href="mailto:test@example.com">test@example.com</a></p>
 
-    <br>
-    <hr>
-    <p class="text-light">© 2024 12FOI</p>
-</main>
+        <br>
+        <hr>
+        <p class="text-light">© 2024 12FOI</p>
+    </main>
+
+    <aside class="sidebar">
+        <h3><span class="large-t">T</span>AG DER OFFENEN <span class="large-t">T</span>ÜR</h3>
+        <p>Weitere Informationen und Termine bald hier an dieser Stelle!</p>
+        <img src="assets/img/europaschule.png" alt="Hessische Europa Schulen Banner">
+    </aside>
+
+    <footer>
+        <p>
+            <a href="contact.html#Impressum">Impressum</a>
+            <a href="contact.html#Kontakt">Kontakt</a>
+        </p>
+        <p class="text-light">Copyright © 2024 12FOI - all rights reserved</p>
+    </footer>
+</div>
 </body>
 </html>
