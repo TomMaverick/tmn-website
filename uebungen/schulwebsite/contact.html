@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/script.js" defer></script>
     <title>Theodor-Litt-Schule, Gießen - Programmierübung</title>
 </head>
+
 <body>
 <div class="grid-container">
     <header>
@@ -18,17 +20,26 @@
         <div>
             <p class="header-title">Theodor-Litt-Schule Gießen</p>
             <p class="header-subtitle">Gewerbliche Berufsschule der Stadt Gießen</p>
+
         </div>
+        <button class="darkModeButton" id="darkModeButton">Dark / Light Mode</button>
+        <div class="header-dateTime" id="dateTime"></div>
     </header>
     <nav class="header-nav">
         <ul>
             <li><a href="index.html">Startseite</a></li>
             <li><a href="index.html#Schulformen">Schulformen</a></li>
             <li><a href="index.html#Sprechzeiten">Sprechzeiten</a></li>
-            <li><a href="index.html#Impressum">Impressum und Kontakt</a></li>
+            <li><b>Impressum und Kontakt</b></li>
         </ul>
     </nav>
-    </header>
+
+    <aside class="sidebar">
+        <h3><span class="large-t">T</span>AG DER OFFENEN <span class="large-t">T</span>ÜR</h3>
+        <p>Weitere Informationen und Termine bald hier an dieser Stelle!</p>
+        <img src="assets/img/europaschule.png" alt="Hessische Europa Schulen Banner">
+    </aside>
+
     <main>
         <h3 class="main-category" id="Impressum">Impressum</h3>
         <p class="contact-no-indent">INHALTLICH VERANTWORTLICH:</p>
@@ -52,12 +63,6 @@
         <hr>
         <p class="text-light">© 2024 12FOI</p>
     </main>
-
-    <aside class="sidebar">
-        <h3><span class="large-t">T</span>AG DER OFFENEN <span class="large-t">T</span>ÜR</h3>
-        <p>Weitere Informationen und Termine bald hier an dieser Stelle!</p>
-        <img src="assets/img/europaschule.png" alt="Hessische Europa Schulen Banner">
-    </aside>
 
     <footer>
         <p>

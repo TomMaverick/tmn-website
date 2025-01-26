@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/script.js" defer></script>
     <title>Theodor-Litt-Schule, Gießen - Programmierübung</title>
 </head>
+
 <body>
 <div class="grid-container">
     <header>
@@ -18,16 +20,26 @@
         <div>
             <p class="header-title">Theodor-Litt-Schule Gießen</p>
             <p class="header-subtitle">Gewerbliche Berufsschule der Stadt Gießen</p>
+
         </div>
+        <button class="darkModeButton" id="darkModeButton">Dark / Light Mode</button>
+        <div class="header-dateTime" id="dateTime"></div>
     </header>
     <nav class="header-nav">
         <ul>
-            <li>Startseite</li>
-            <li><a href="#Schulformen">Schulformen</a></li>
-            <li><a href="#Sprechzeiten">Sprechzeiten</a></li>
-            <li><a href="contact.html">Impressum und Kontakt</a></li>
+            <li><b>Startseite</b></li>
+            <li><a class="link" href="#Schulformen">Schulformen</a></li>
+            <li><a class="link" href="#Sprechzeiten">Sprechzeiten</a></li>
+            <li><a class="link" href="contact.html">Impressum und Kontakt</a></li>
         </ul>
     </nav>
+
+    <aside class="sidebar">
+        <h3><span class="large-t">T</span>AG DER OFFENEN <span class="large-t">T</span>ÜR</h3>
+        <p>Weitere Informationen und Termine bald hier an dieser Stelle!</p>
+        <img src="assets/img/europaschule.png" alt="Hessische Europa Schulen Banner">
+    </aside>
+
     <main>
         <h1 class="main-title" id="Startseite">Theodor-Litt-Schule Gießen</h1>
         <p class="text-light">Die Theodor-Litt-Schule ist eine gewerbliche Berufsschule, die sowohl Voll- als auch
@@ -90,16 +102,10 @@
         </table>
     </main>
 
-    <aside class="sidebar">
-        <h3><span class="large-t">T</span>AG DER OFFENEN <span class="large-t">T</span>ÜR</h3>
-        <p>Weitere Informationen und Termine bald hier an dieser Stelle!</p>
-        <img src="assets/img/europaschule.png" alt="Hessische Europa Schulen Banner">
-    </aside>
-
     <footer>
         <p>
-            <a href="contact.html#Impressum">Impressum</a>
-            <a href="contact.html#Kontakt">Kontakt</a>
+            <a class="link" href="contact.html#Impressum">Impressum</a>
+            <a class="link" href="contact.html#Kontakt">Kontakt</a>
         </p>
         <p class="text-light">Copyright © 2024 12FOI - all rights reserved</p>
     </footer>
