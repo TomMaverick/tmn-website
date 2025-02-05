@@ -60,6 +60,11 @@ body.darkmode {
     right: 0.5em;
 }
 
+.skip-link {
+    position: absolute;
+    left: -1000em;
+}
+
 header {
     grid-area: header;
     background-color: var(--header-bg-color);
