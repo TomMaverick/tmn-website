@@ -23,6 +23,24 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    function berechneSpritverbrauch() {
+        "use strict";
+        let gefahreneKm2 = parseFloat(document.getElementById('gefahreneKm2').value);
+        let verbrauchterSprit2 = parseFloat(document.getElementById('verbrauchterSprit2').value);
+
+        if (isNaN(gefahreneKm2) || gefahreneKm2 <= 0 || isNaN(verbrauchterSprit2) || verbrauchterSprit2 <= 0) {
+            document.getElementById('spritrechnerErgebnis').textContent = "Bitte geben Sie eine gültige Zahl ein!";
+            return;
+        }
+
+        let durchschnitt2 = (verbrauchterSprit2 / gefahreneKm2) * 100;
+        let text2 = `\nDurchschnittsverbrauch: ${durchschnitt2.toFixed(2)} Liter / 100km`;
+        document.getElementById('spritrechnerErgebnis').textContent = text2;
+    }
+
+    document.getElementById('SpritrechnerBerechnen').addEventListener('click', berechneSpritverbrauch);
+
+
     // Function to update date and time
     function updateDateTime() {
         const now = new Date();
