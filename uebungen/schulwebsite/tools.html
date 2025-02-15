@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+    <title>Theodor-Litt-Schule, Gießen - Programmierübung</title>
+</head>
+
+<body class="tools-html">
+<div class="grid-container">
+    <header>
+        <div class="header-img">
+            <a aria-label="Zurück zur Startseite" href="index.html">
+                <img alt="Logo der Theodor-Litt-Schule, Gießen" src="assets/img/logo_tls.png">
+            </a>
+        </div>
+        <div>
+            <p class="header-title">Theodor-Litt-Schule Gießen</p>
+            <p class="header-subtitle">Gewerbliche Berufsschule der Stadt Gießen</p>
+
+        </div>
+        <button class="darkModeButton" id="darkModeButton">Dark / Light Mode</button>
+        <div class="header-dateTime" id="dateTime"></div>
+    </header>
+    <nav class="header-nav">
+        <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="index.html#Schulformen">Schulformen</a></li>
+            <li><a href="index.html#Sprechzeiten">Sprechzeiten</a></li>
+            <li><b>Tools</b></li>
+            <li><a class="link" href="contact.html">Impressum und Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <main class="nested-grid">
+        <div class="site-header">
+            <h1 class="main-title">Tools</h1>
+        </div>
+
+        <!--Spritrechner mit prompt und alert (Script am Ende des Dokuments)-->
+        <div class="tools-content-1">
+            <h3>Spritrechner<br>(prompt & alert)</h3>
+            <p>Hier finden Sie einen Spritrechner der prompt und alert benutzt.</p>
+            <button id="startSRPrompt">Spritrechner starten</button>
+        </div>
+
+        <!--Spritrechner mit Eingabefeldern (siehe script.js)-->
+        <div class="tools-content-2">
+            <h3>Spritrechner<br>(Eingabefelder & script.js)</h3>
+            <p>Hier finden Sie einen Spritrechner der Ein- und Ausgabefelder benutzt.</p>
+
+            <label for="gefahreneKm2">Gefahrene Kilometer:</label>
+            <input type="number" id="gefahreneKm2" min="1" step="1">
+
+            <label for="verbrauchterSprit2">Verbrauchter Sprit (Liter):</label>
+            <input type="number" id="verbrauchterSprit2" min="1" step="0.5">
+
+            <button id="SpritrechnerBerechnen">Berechnen</button>
+
+            <div id="spritrechnerErgebnis"></div>
+        </div>
+
+        <!--Tool 3-->
+        <div class="tools-content-3">
+            <h3>Coming Soon</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <a class="link" href="contact.html#Impressum">Impressum</a>
+            <a class="link" href="contact.html#Kontakt">Kontakt</a>
+        </p>
+        <p class="text-light">Copyright © 2024 12FOI - all rights reserved</p>
+    </footer>
+</div>
+
+
+<!-- Ab hier direkt implementierter JS Code -->
+<script>
+    function startSRPrompt() {
+        "use strict";
+        let gefahreneKm1 = parseFloat(prompt("Wie weit sind Sie gefahren?", ""));
+        if (gefahreneKm1 <= 0 || isNaN(gefahreneKm1)) {
+            alert("Bitte geben Sie eine gültige Zahl ein!");
+            return;
+        }
+
+        let verbrauchterSprit1 = parseFloat(prompt("Wie viel Sprit haben Sie verbraucht?", ""));
+        if (verbrauchterSprit1 <= 0 || isNaN(verbrauchterSprit1)) {
+            alert("Bitte geben Sie eine gültige Zahl ein!");
+            return;
+        }
+
+        let durchschnitt1 = (verbrauchterSprit1 / gefahreneKm1) * 100;
+        let text1 = `Durchschnittsverbrauch: ${durchschnitt1.toFixed(2)} Liter / 100km`;
+        alert(text1);
+    }
+    document.getElementById('startSRPrompt').addEventListener('click', startSRPrompt);
+</script>
+
+</body>
+</html>
