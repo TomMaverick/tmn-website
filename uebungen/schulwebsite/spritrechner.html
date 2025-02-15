@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+    <title>Theodor-Litt-Schule, Gießen - Programmierübung</title>
+</head>
+
+<body>
+<div class="grid-container">
+    <header>
+        <div class="header-img">
+            <a aria-label="Zurück zur Startseite" href="index.html">
+                <img alt="Logo der Theodor-Litt-Schule, Gießen" src="assets/img/logo_tls.png">
+            </a>
+        </div>
+        <div>
+            <p class="header-title">Theodor-Litt-Schule Gießen</p>
+            <p class="header-subtitle">Gewerbliche Berufsschule der Stadt Gießen</p>
+
+        </div>
+        <button class="darkModeButton" id="darkModeButton">Dark / Light Mode</button>
+        <div class="header-dateTime" id="dateTime"></div>
+    </header>
+    <nav class="header-nav">
+        <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="index.html#Schulformen">Schulformen</a></li>
+            <li><a href="index.html#Sprechzeiten">Sprechzeiten</a></li>
+            <li><b>Spritrechner</b></li>
+            <li><a class="link" href="contact.html">Impressum und Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <main class="nested-main">
+        <script>
+            let gefahreneKm = "",
+                verbrauchterSprit = "";
+            gefahreneKm = prompt("Wie weit sind sie gefahren?", gefahreneKm);
+            verbrauchterSprit = prompt("Wie viel Sprit haben sie verbraucht?", verbrauchterSprit);
+            durchschnitt = ((verbrauchterSprit / gefahreneKm) * 100);
+            text = `Durchschnittsverbrauch: ${durchschnitt} Liter / 100km`
+            alert(text);
+        </script>
+    </main>
+
+    <footer>
+        <p>
+            <a class="link" href="contact.html#Impressum">Impressum</a>
+            <a class="link" href="contact.html#Kontakt">Kontakt</a>
+        </p>
+        <p class="text-light">Copyright © 2024 12FOI - all rights reserved</p>
+    </footer>
+</div>
+</body>
+</html>
