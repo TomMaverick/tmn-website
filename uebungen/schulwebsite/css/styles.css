@@ -163,9 +163,10 @@ a {
     display: grid;
     grid-template-areas:
         "site-header site-header site-header"
-        "tools-content-1 tools-content-2 tools-content-3";
+        "tools-content-1 tools-content-2 tools-content-3"
+        "tools-content-4 tools-content-4 tools-content-4";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto 1fr 1fr;
     gap: 1em;
 }
 
@@ -176,14 +177,31 @@ a {
 
 .tools-content-1 {
     grid-area: tools-content-1;
+    border: 0.1em solid var(--table-border);
+    padding: 0.5em;
 }
 
 .tools-content-2 {
     grid-area: tools-content-2;
+    border: 0.1em solid var(--table-border);
+    padding: 0.5em;
+
+    input {
+        display: block;
+        margin-bottom: 0.5em;
+    }
 }
 
 .tools-content-3 {
     grid-area: tools-content-3;
+    border: 0.1em solid var(--table-border);
+    padding: 0.5em;
+}
+
+.tools-content-4 {
+    grid-area: tools-content-4;
+    border: 0.1em solid var(--table-border);
+    padding: 0.5em;
 }
 
 main {
@@ -228,6 +246,10 @@ main {
 }
 
 #spritrechnerErgebnis {
+    display: inline-block;
+}
+
+#countdownAbschlusspruefung {
     display: inline-block;
 }
 
