@@ -73,6 +73,20 @@
 
         <!--Tool 4-->
         <div class="tools-content-4">
+            <h3>Schaltjahr</h3>
+            <p>Handelt es sich bei dem eingegebenen Jahr um ein Schaltjahr?</p>
+            <button id="schaltjahrBerechnen">Berechnen</button>
+        </div>
+
+        <!--Tool 5-->
+        <div class="tools-content-5">
+            <h3>Coming soon...</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+        <!--Tool 6-->
+        <div class="tools-content-6">
             <h3>Coming soon...</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -91,8 +105,8 @@
 
 <!-- Ab hier direkt implementierter JS Code -->
 <script>
+    "use strict";
     function startSRPrompt() {
-        "use strict";
         let gefahreneKm1 = parseFloat(prompt("Wie weit sind Sie gefahren?", ""));
         if (gefahreneKm1 <= 0 || isNaN(gefahreneKm1)) {
             alert("Bitte geben Sie eine gültige Zahl ein!");
