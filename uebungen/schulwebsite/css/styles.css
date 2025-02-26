@@ -164,7 +164,7 @@ a {
     grid-template-areas:
         "site-header site-header site-header"
         "tools-content-1 tools-content-2 tools-content-3"
-        "tools-content-4 tools-content-4 tools-content-4";
+        "tools-content-4 tools-content-5 tools-content-6";
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto 1fr 1fr;
     gap: 1em;
@@ -200,6 +200,16 @@ a {
 
 .tools-content-4 {
     grid-area: tools-content-4;
+    border: 0.1em solid var(--table-border);
+    padding: 0.5em;
+}
+.tools-content-5 {
+    grid-area: tools-content-5;
+    border: 0.1em solid var(--table-border);
+    padding: 0.5em;
+}
+.tools-content-6 {
+    grid-area: tools-content-6;
     border: 0.1em solid var(--table-border);
     padding: 0.5em;
 }
