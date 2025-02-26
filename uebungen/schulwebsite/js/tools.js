@@ -1,7 +1,6 @@
 "use strict";   // Aktiviert strict-mode. Dient dazu sicheren und sauberen Code zu schreiben
 
 document.addEventListener("DOMContentLoaded", () => {
-
     // Spritrechner mit Eingabefeldern
     function berechneSpritverbrauch() {
             // Werte aus den Eingabefeldern werden in float umgewandelt
@@ -38,54 +37,46 @@ document.addEventListener("DOMContentLoaded", () => {
             const tage = Math.floor(differenz / (1000 * 60 * 60 * 24));
             // Berechne die verbleibenden Stunden des aktuellen Tages
             const stunden = Math.floor((differenz % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            // Berechne die verbleibenden Minuten im aktuellen Stunde
+            const minuten = Math.floor((differenz % (1000 * 60 * 60)) / (1000 * 60));
+            // Berechne die verbleibenden Sekunden im aktuellen Minute
+            const sekunden = Math.floor((differenz % (1000 * 60)) / 1000);
 
-            if(tage >= 0) {
-                countdownElement.textContent = `${tage} Tage und ${stunden} Stunden`;
-            } else if (stunden >= 0) {
-                countdownElement.textContent = `${stunden} Stunden`;
-            } else if (stunden <= 0) {
-                countdownElement.textContent = `Die Prüfung hat begonnen!`;
+            if (tage >= 1) {
+                countdownElement.textContent = `${tage} Tage\n${stunden} Std. ${minuten} Min. ${sekunden} Sek.`;
+            } else if (stunden >= 1) {
+                countdownElement.textContent = `${stunden} Std. ${minuten} Min. ${sekunden} Sek.`;
+            } else if (minuten >= 1) {
+                countdownElement.textContent = `${minuten} Min. ${sekunden} Sek.`;
+            } else if (sekunden >= 1) {
+                countdownElement.textContent = `${sekunden} Sek.`;
             } else {
-                countdownElement.textContent = `Fehler in der Berechnung`;
+                countdownElement.textContent = `Die Prüfung hat begonnen!\nViel Erfolg!`;
             }
         }
-
         updateCountdown();      // Initiales Update
-        setInterval(updateCountdown, 60000);      // Update jede Minute
+        setInterval(updateCountdown, 1000);      // Update jede Sekunde
     }
-
     // Direkt den Countdown starten
     startCountdown();
 
-    // Schaltjahre
-    // Ob ein Kalenderjahr ein Schaltjahr ist, kann anhand folgender Eigenschaften überprüft werden:
-    // Ein Jahr ist kein Schaltjahr, wenn die Jahreszahl nicht durch 4 teilbar ist.
-    // Ein Jahr ist ein Schaltjahr, wenn die Jahreszahl durch 4, aber nicht durch 100 teilbar ist.
-    // Ein Jahr ist ein Schaltjahr, wenn die Jahreszahl durch 4, durch 100 und durch 400 teilbar ist.
-    function schaltjahr() {
 
-        let eingegebenesJahr = parseFloat(prompt("Welches Jahr wollen sie prüfen?", ""));
-        // Prüfen ob eine gültige Jahreszahl eingegeben wurde.
-        if (isNaN(eingegebenesJahr)) {
+    // Schaltjahr
+    function schaltjahr() {
+        let jahr = parseFloat(prompt("Welches Jahr wollen sie prüfen?", ""));
+
+        if (isNaN(jahr)) {
             alert("Bitte geben Sie ein gültiges Jahr ein!");
-            return;
-        }
-        if (eingegebenesJahr % 4 === 0) {
-            if (eingegebenesJahr % 100 === 0) {
-                if (eingegebenesJahr % 400 === 0) {
-                    alert("Das eingegebene Jahr IST ein Schaltjahr!")
-                } else {
-                    alert("Das eingegebene Jahr ist KEIN Schaltjahr!")
-                }
-            } else {
-                alert("Das eingegebene Jahr IST ein Schaltjahr!")
-            }
+        } else if (jahr % 400 === 0) {
+            alert(`${jahr} ist ein Schaltjahr!`)
+        } else if (jahr % 100 === 0) {
+            alert(`${jahr} ist KEIN Schaltjahr!`)
+        } else if (jahr % 4 === 0) {
+            alert(`${jahr} ist ein Schaltjahr!`)
         } else {
-            alert("Das eingegebene Jahr ist KEIN Schaltjahr!")
+            alert(`${jahr} ist KEIN Schaltjahr!`)
         }
     }
-
-
     // Event-Listener, der die Funktion beim Klick auf den Button ausführt
     document.getElementById('schaltjahrBerechnen').addEventListener('click', schaltjahr);
 });

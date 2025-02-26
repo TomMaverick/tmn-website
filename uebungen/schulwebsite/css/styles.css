@@ -274,6 +274,14 @@ main {
     margin-bottom: 1.5em;
 }
 
+pre {
+    font-size: inherit;       /* Vererbt die Schriftgröße des Elternelements */
+    line-height: inherit;     /* Vererbt den Zeilenabstand des Elternelements */
+    font-family: inherit;     /* Vererbt die Schriftart des Elternelements */
+    white-space: pre-wrap;    /* Zeilenumbrüche beibehalten, aber Text umbricht bei Bedarf */
+    word-wrap: break-word;    /* Lange Wörter brechen, um den Text nicht über den Rand hinauszuschieben */
+}
+
 table, th, td {
     font-size: 0.85em;
     border-collapse: collapse;
