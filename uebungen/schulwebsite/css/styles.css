@@ -302,6 +302,17 @@ hr {
     margin: 0 0 0 1em;
 }
 
+input:required + label::after {
+    position: absolute;
+    left: 300%;
+    content: "★";
+    color: red;
+}
+input:required:valid + label::after {
+    content: "✔";
+    color: green;
+}
+
 aside.sidebar {
     grid-area: aside;
     background-color: var(--sidebar-bg-color);
