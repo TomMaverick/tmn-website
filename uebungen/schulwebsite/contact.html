@@ -48,8 +48,8 @@
             </p>
 
             <!-- Kontaktformular -->
-            <h3 class="main-category" id="KontaktForm">Kontaktformular</h3>
-            <form>
+            <h3 class="main-category">Kontaktformular</h3>
+            <form class="contact-form" id="contactForm">
                 <label for="name">Name*</label>
                 <input id="name" name="name" placeholder="Ihr Name" maxlength="100" required>
                 <label for="email">E-Mail*</label>
@@ -57,7 +57,15 @@
                 <label for="message">Nachricht*</label>
                 <textarea id="message" name="message" rows="6" placeholder="Ihre Nachricht" maxlength="1000" required></textarea>
                 <p>* Pflichtangabe</p>
-                <button type="submit">Absenden</button>
+                <button type="submit" id="submitButton">Absenden</button>
+
+                <div id="formData" style="margin-top: 20px; display: none;">
+                    <h3>Nachricht gesendet!</h3>
+                    <h4>Ihre Eingaben:</h4>
+                    <p><strong>Name:</strong> <span id="displayName"></span></p>
+                    <p><strong>E-Mail:</strong> <span id="displayEmail"></span></p>
+                    <p><strong>Nachricht:</strong> <span id="displayMessage"></span></p>
+                </div>
             </form>
 
             <!-- Kontaktdaten -->
