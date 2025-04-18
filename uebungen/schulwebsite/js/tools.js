@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Schaltjahr
     function schaltjahr() {
-        let jahr = parseFloat(prompt("Welches Jahr wollen sie prüfen?", ""));
+        let jahr = parseFloat(prompt("Welches Jahr wollen sie prüfen? Keine Eingabe zum beenden.", ""));
 
         if (isNaN(jahr)) {
             alert("Bitte geben Sie ein gültiges Jahr ein!");
