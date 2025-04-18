@@ -1,0 +1,455 @@
+:root {
+    --background-color: #fdfbdf;
+    --text-1: #000000;
+    --text-2: #48117d;
+    --header-bg-color: #ffffff;
+    --nav-bg-color: #d1d1d1;
+    --title-bg: #7fcdf5;
+    --title-text: #284e52;
+    --category-bg: #00bff8;
+    --category-border: #000000;
+    --category-text: #001877;
+    --table-border: #000000;
+    --sidebar-bg-color: #b02128;
+    --sidebar-text-color: yellow;
+    --link-text-color: blue;
+}
+
+.darkMode {
+    --background-color: #333333;
+    --text-1: #ffffff;
+    --text-2: #e0e0e0;
+    --header-bg-color: #292929;
+    --nav-bg-color: #292929;
+    --title-bg: #631ead;
+    --title-text: #ffffff;
+    --category-bg: #631ead;
+    --category-border: #000000;
+    --category-text: #ffffff;
+    --table-border: #000000;
+    --sidebar-bg-color: #82191e;
+    --sidebar-text-color: yellow;
+    --link-text-color: white;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-1);
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 40em;
+    width: 90%;
+    max-width: 80em;
+    margin: 1.5em auto;
+}
+
+body.darkmode {
+    background-color: var(--background-color);
+    color: var(--text-1);
+}
+
+.darkModeButton {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+}
+
+.header-dateTime {
+    position: absolute;
+    font-size: 0.8em;
+    bottom: 0.5em;
+    right: 0.5em;
+}
+
+.skip-link {
+    position: absolute;
+    left: -1000em;
+}
+
+header {
+    grid-area: header;
+    background-color: var(--header-bg-color);
+    display: flex;
+    align-items: flex-start;
+    padding: 0.5em;
+    position: relative;
+}
+
+header img {
+    background-color: white;
+}
+
+header a img {
+    height: 3em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0.0em 3em 1em 0.5em;
+}
+
+.header-title {
+    color: var(--text-2);
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.header-subtitle {
+    color: var(--text-2);
+    font-size: 0.7em;
+    text-align: left;
+    margin-top: 0;
+}
+
+nav {
+    grid-area: nav;
+    background-color: var(--nav-bg-color);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    max-width: 105px;
+    min-height: 700px;
+}
+
+nav li {
+    margin-bottom: 0.4em;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--link-text-color);
+    display: block;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav nested-grid"
+        "footer footer";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 1em;
+    margin: 0 auto;
+}
+
+.index-html .nested-grid {
+    grid-area: nested-grid;
+    display: grid;
+    grid-template-areas:
+        "site-header site-header"
+        "main-content aside";
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr;
+    gap: 1em;
+}
+
+.contact-html .nested-grid {
+    grid-area: nested-grid;
+    display: grid;
+    grid-template-areas:
+        "main-content";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 1em;
+}
+
+.tools-html .nested-grid {
+    grid-area: nested-grid;
+    display: grid;
+    grid-template-areas:
+        "site-header site-header site-header"
+        "tools-content-1 tools-content-2 tools-content-3"
+        "tools-content-4 tools-content-5 tools-content-6";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
+    gap: 1em;
+}
+
+.site-header {
+    grid-area: site-header;
+    width: 100%;
+}
+
+.tools-content-1 {
+    grid-area: tools-content-1;
+    border: 0.1em solid var(--table-border);
+    padding: 0.5em;
+}
+
+.tools-content-2 {
+    grid-area: tools-content-2;
+    border: 0.1em solid var(--table-border);
+    padding: 0.5em;
+
+    input {
+        display: block;
+        margin-bottom: 0.5em;
+    }
+}
+
+.tools-content-3 {
+    grid-area: tools-content-3;
+    border: 0.1em solid var(--table-border);
+    padding: 0.5em;
+}
+
+.tools-content-4 {
+    grid-area: tools-content-4;
+    border: 0.1em solid var(--table-border);
+    padding: 0.5em;
+}
+.tools-content-5 {
+    grid-area: tools-content-5;
+    border: 0.1em solid var(--table-border);
+    padding: 0.5em;
+}
+.tools-content-6 {
+    grid-area: tools-content-6;
+    border: 0.1em solid var(--table-border);
+    padding: 0.5em;
+}
+
+main {
+    grid-area: main;
+    background-color: var(--background-color);
+}
+
+.main-content {
+    grid-area: main-content;
+    background-color: var(--background-color);
+}
+
+.main-title {
+    color: var(--title-text);
+    font-size: 1.5em;
+    position: relative;
+    padding: 0.4em;
+    margin-top: 0.7em;
+    border: 2px solid var(--title-bg);
+    border-radius: 0 1em 1em 1em;
+    background-color: var(--title-bg);
+}
+
+.main-category {
+    color: var(--category-text);
+    font-size: 1.2em;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    padding: 0;
+    margin-top: 0.7em;
+    border: 0.1em solid var(--category-border);
+    background-color: var(--category-bg);
+}
+
+#startSpritrechner {
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+#spritrechnerErgebnis {
+    display: inline-block;
+}
+
+#countdownAbschlusspruefung {
+    display: inline-block;
+}
+
+.text-light {
+    color: var(--text-2);
+    text-align: justify;
+}
+
+.main-list {
+    color: var(--text-1);
+    font-size: 0.9em;
+    margin-bottom: 1.5em;
+}
+
+pre {
+    font-size: inherit;       /* Vererbt die Schriftgröße des Elternelements */
+    line-height: inherit;     /* Vererbt den Zeilenabstand des Elternelements */
+    font-family: inherit;     /* Vererbt die Schriftart des Elternelements */
+    white-space: pre-wrap;    /* Zeilenumbrüche beibehalten, aber Text umbricht bei Bedarf */
+    word-wrap: break-word;    /* Lange Wörter brechen, um den Text nicht über den Rand hinauszuschieben */
+}
+
+table, th, td {
+    font-size: 0.85em;
+    border-collapse: collapse;
+    border: 0.1em solid var(--table-border);
+    padding: 1em 0.6em;
+    margin-bottom: 2em;
+}
+
+hr {
+    border: 0.05em solid;
+}
+
+.contact-no-indent {
+    margin: 0;
+}
+
+.contact-indent {
+    margin: 0 0 0 1em;
+}
+
+/* Formular-Styling */
+form {
+    max-width: 25em;
+    margin: 1em;
+}
+
+form label {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 0.5em;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    background-color: var(--category-bg);
+    color: var(--category-text);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    margin-bottom: 2em;
+}
+
+/* Styling für den Bestätigungsbereich nach dem Senden */
+#formData {
+    background-color: var(--header-bg-color);
+    border: 2px solid black;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+#formData h3 {
+    margin-top: 0;
+    color: green;
+}
+
+#formData p {
+    color: var(--text-1);
+}
+
+aside.sidebar {
+    grid-area: aside;
+    background-color: var(--sidebar-bg-color);
+    max-width: 105px;
+    padding: 1em;
+    color: white;
+    text-align: center;
+}
+.sidebar h3 {
+    color: var(--sidebar-text-color);
+}
+
+.sidebar .large-t {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.sidebar img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    grid-area: footer;
+    background-color: var(--background-color);
+
+    text-align: left;
+    padding: 1em;
+    border-top: 1px solid var(--table-border);
+}
+
+/* --- Stile für die Flugbuchungsseite (index.php) --- */
+.filter-form {
+    background-color: var(--nav-bg-color, #eee); /* Fallback-Farbe */
+    padding: 1em;
+    margin-bottom: 1.5em;
+    border-radius: 5px;
+    border: 1px solid var(--table-border, #ccc);
+}
+.filter-form label,
+.filter-form input {
+    display: inline-block; /* Nebeneinander anzeigen */
+    margin-right: 1em;
+    margin-bottom: 0.5em; /* Kleinerer Abstand unten */
+}
+/* Spezifischer Selektor für den Button im Filterformular */
+.filter-form button[type="submit"] {
+    background-color: var(--category-bg);
+    color: var(--category-text);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    border: 1px solid var(--category-border);
+    cursor: pointer;
+}
+.flight-table {
+    width: 100%;
+    margin-top: 1em;
+    border-collapse: collapse; /* Stellt sicher, dass die CSS-Variablen für border funktionieren */
+}
+.flight-table th, .flight-table td {
+    border: 1px solid var(--table-border, #000); /* Verwende Variable aus styles.css */
+    padding: 0.8em;
+    text-align: left;
+    font-size: 0.9em;
+}
+.flight-table th {
+    background-color: var(--title-bg, #7fcdf5);
+    color: var(--title-text, #284e52);
+}
+.flight-table tr:nth-child(even) {
+    background-color: var(--header-bg-color, #f2f2f2);
+}
+.book-button {
+    display: inline-block;
+    background-color: var(--category-bg);
+    color: var(--category-text);
+    padding: 0.3em 0.8em;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid var(--category-border);
+    cursor: pointer;
+    font-size: 0.9em;
+    text-align: center;
+}
+.no-flights {
+    color: var(--text-2);
+    font-style: italic;
+    margin-top: 1em;
+}
+
+body {
+    max-width: 1200px;
+    margin: 1.5em auto;
+    padding: 0 1em;
+}
+main {
+    padding: 1em 0;
+}
