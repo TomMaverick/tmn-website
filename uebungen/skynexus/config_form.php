@@ -11,7 +11,7 @@ unset($_SESSION['config_error']); // Fehlermeldung aus der Session entfernen
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datenbank Konfiguration</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/skynexus-styles.css">
     <style>
         /* Einfache Stile für das Formular */
         body { max-width: 600px; margin: 2em auto; padding: 1em; }
